@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The Targaryens</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container mx-auto max-w-7xl px-3">
+            <h1 class="text-6xl text-center pt-5 pb-8 text-white">The Targaryens</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+            <% data.forEach(el=>{ %>
+                <div class="flex flex-col flex-1 mx-2 bg-orange-900 card justify-self-center rounded-md text-center">
+                    <img src="<%= el.imageUrl %>" alt="" class="rounded-t-md">
+                    <div class="p-3 text-white">
+                        <p class="text-lg"><%= el.characterName %> </p>
+                        <p class="text-sm"><%= el.actorName %> </p>
+                    </div>
+                </div>
+            <% }) %> 
+        </div>
+    </div>
+</body>
+</html>
